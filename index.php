@@ -32,20 +32,20 @@ get_header(); ?>
 
         <hr>
         <div class="description">
-            <div class="container">
-                <div class="col-lg-4 des">
+            <div class="main-des">
+                <div class="des">
                     <span><span class="glyphicon glyphicon-king"></span> آموزش زبان فرانسه</span>
                     <p>     آموزش زبان فرانسه بصورت آنلاین و حضوری با متد جدید گروه آموزشی Francais Fastoche  با فراهم کردن بستری برای تقویت مکالمه، یادگیری تلفظ صحیح زبان فرانسه و ... برای دوستداران زبان فرانسه و مهاجرین به کشورهای فرانسوی زبان (Francophone)
 
                     </p>
                 </div>
 
-                <div class="col-lg-4 des">
+                <div class="des">
                     <span><span class="glyphicon glyphicon-education"></span> ترجمه تخصصی</span>
                     <p>ترجمه تخصصی متون علمی و پژوهشی فرانسه و انگلیسی برای محققین و دانشجویان بصورت سفارش آنلاین با تعرفه ی مناسب.</p>
                 </div>
 
-                <div class="col-lg-4 des">
+                <div class="des">
                     <span><span class="glyphicon glyphicon-camera"></span>  کتاب و فیلم</span>
                     <p>معرفی و بررسی کتاب های زبان فرانسه  و بهترین فیلم های سینمای فرانسه و کشورهای فرانسوی زبان </p>
                 </div>
