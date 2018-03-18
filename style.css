@@ -1,0 +1,748 @@
+/*
+Theme Name: francaisfastoche
+Theme URI: https://wordpress.org/themes/francaisfastoche
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: francaisfastoche
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Accessibility
+3.0 Alignments
+4.0 Clearings
+5.0 Typography
+6.0 Forms
+7.0 Formatting
+8.0 Lists
+9.0 Tables
+10.0 Links
+11.0 Featured Image Hover
+12.0 Navigation
+13.0 Layout
+   13.1 Header
+   13.2 Front Page
+   13.3 Regular Content
+   13.4 Posts
+   13.5 Pages
+   13.6 Footer
+14.0 Comments
+15.0 Widgets
+16.0 Media
+   16.1 Galleries
+17.0 Customizer
+18.0 SVGs Fallbacks
+19.0 Media Queries
+20.0 Print
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
+*/
+
+
+@font-face {
+
+  font-family: IRANsans;
+  src: url('./assets/fonts/IRANSansWeb.woff');
+}
+
+html,
+body
+ {
+
+  margin:0;
+  padding: 0;
+}
+
+body {
+
+	font-family: IRANSans;
+}
+
+p {
+
+  line-height: 2em;
+
+}
+
+hr {
+
+  margin: 5px 0;
+}
+
+.text-align-center {
+
+    text-align: center;
+    font-size:16px;
+    padding:0 30px;
+    text-transform: uppercase;
+}
+
+nav {
+
+  font-size: 1.2em;
+  display: block;
+  background-color: white;
+}
+
+a {
+  color: white;
+}
+
+.navbar-header {
+
+    float: left;
+	clear:left;
+	background-color: white;
+	text-shadow: 1px 1px  #ddd;
+}
+
+/*span.icon-bar {*/
+
+/*color: blue !important;*/
+/*}*/
+
+
+/*.navbar-brand {*/
+
+	/*font-size: 2em;*/
+	/*float: left;*/
+
+/*}*/
+
+a.navbar-brand {
+
+	color: blue;
+	font-family: serif;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 1.8em;
+	float: left;
+
+}
+
+.navbar-brand:hover {
+
+	 color: blue;
+ }
+
+.navbar-nav li {
+
+	padding: 0 5px;
+}
+
+.navbar-nav li a {
+
+	color: red;
+}
+
+
+.content-container {
+
+	position: relative;
+
+}
+
+.content {
+
+	position: relative;
+}
+
+.main-slider {
+
+	display:flex;
+	justify-content: center;
+	padding-bottom: 50px;
+
+}
+
+
+.slider {
+
+
+	position: relative;
+	display:flex;
+
+	width: 100%;
+	height: 500px;
+}
+.slider img {
+
+	width:100%;
+	height:inherit;
+}
+
+#top-arrow {
+
+	height: 25px;
+	width: 15px;
+	z-index: 10;
+	position: absolute;
+	top: 25%;
+	left:10%;
+	background-repeat: no-repeat;
+}
+
+#down-arrow {
+
+	height: 25px;
+	width: 15px;
+	z-index: 10;
+	position: absolute;
+	top: 55%;
+	left: 10%;
+	background-repeat: no-repeat;
+
+}
+
+
+
+#main-title {
+
+	position: absolute;
+	width: 60%;;
+	color: #eee;
+	z-index: 10;
+	font-size: 50px;
+	font-weight: 600;
+	text-align: center;
+	align-self: center;
+	direction: ltr;
+}
+
+#header-slider {
+
+	/*    background-image: url(../images/banner.jpg);*/
+	width: 100%;
+	height: 500px;
+	/*    overflow: hidden;*/
+
+}
+
+#header-slider img {
+
+	height: inherit;
+	width: 100%;
+}
+
+.subs-form {
+
+	/*    margin: 100px 0;*/
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+
+}
+
+.subs-form input[type="text"] {
+
+	padding: 15px;
+	font-size: 18px;
+	border: 1px solid #999;
+	background: #fff;
+	color: #111;
+	outline: none;
+	width: 30%;
+	border-radius: 5px;
+
+}
+
+.subs-form input[type="button"] {
+
+	padding: 15px;
+	font-size: 18px;
+	background: #212121;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #f3f3f3;
+	width: 27%;
+	border-radius: 5px;
+}
+
+
+.description {
+
+
+	padding: 30px 0;
+	text-align: center;
+	background-color: #eee;
+}
+
+.des {
+
+	padding:20px 40px;
+}
+
+.des span {
+
+	font-size: 26px;
+	margin-bottom: 20px;
+
+}
+
+.special-part {
+
+	width: 100%;
+	height: 400px;
+	color: white;
+	background-color: #888888;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+
+.special-section {
+
+	font-size: 3em;
+	font-weight: 600;
+	width: 45%;
+	text-align: center;
+	margin: 40px 20px 0 20px;
+	border-bottom: 2px solid white;
+
+}
+
+.special-section.latest {
+
+	border-bottom: none;
+
+}
+
+.articles {
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 30px 0;
+	padding-bottom: 30px;
+    height: 100%;
+
+}
+
+.article {
+
+	width: 45%;
+	height: auto;
+	margin: 20px;
+	position: relative;
+    box-shadow: 1px 1px 10px 1px #999;
+    padding: 20px;
+
+}
+
+.article img {
+
+	width: 100%;
+	height: inherit;
+}
+
+.article h2 {
+
+	position: absolute;
+	color: white;
+	font-size: 2.2em;
+	top: 50%;
+	right: 40px;
+    z-index: 100;
+}
+
+
+.footer {
+
+	width: 100%;
+	position: relative;
+	height: 300px;
+	background-color: #333 ;
+	color: white;
+	padding-bottom: 30px;
+	display: flex;
+	/*overflow: hidden;*/
+
+}
+
+.about-us {
+
+	display: flex;
+	width: 30%;
+	flex-direction: column;
+	align-self: center;
+	padding: 30px;
+
+}
+
+
+.about-us h4 {
+
+	margin-bottom: 20px;
+}
+
+.about-us p {
+
+	text-align: justify;
+
+}
+
+.social-networks {
+
+	display: flex;
+	width: 40%;
+	justify-content: center;
+
+
+}
+
+.social-networks div{
+	display: flex;
+	align-self: center;
+
+}
+
+.social-networks div img{
+	width: 48px;
+	height: 48px;
+	margin: 15px;
+}
+
+.telegram-icon img {
+
+	width: 48px;
+	height: 48px;
+}
+
+
+.footer-logo {
+
+	display: flex;
+	width: 30%;
+	justify-content: center;
+	align-self:center;
+	padding: 30px;
+
+}
+.footer-logo p {
+
+	text-align: justify;
+
+
+}
+
+/*.footer #footer-sections div {*/
+
+	/*width: 100%;*/
+	/*border-left: 2px solid white;*/
+	/*margin: 20px 0;*/
+	/*height: 200px;*/
+
+/*}*/
+
+/*.footer #footer-sections div:last-of-type {*/
+
+	/*border-left: none;*/
+
+/*}*/
+
+
+.footer h3 {
+
+	text-align: center;
+	margin: 10px;
+
+}
+
+#copyright {
+
+	background-color: black;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/*div#footer-sections {*/
+
+	/*display: flex;*/
+	/*flex-direction: row;*/
+
+/*}*/
+
+/*.footer-section {*/
+
+	/*padding-bottom:30px;*/
+/*}*/
+
+/*.footer-section p {*/
+
+	/*font-size: 16px;*/
+	/*margin-top: 20px;*/
+/*}*/
+
+/*.footer-section:first-of-type {*/
+
+	/*display: flex;*/
+	/*flex-direction: column;*/
+
+
+/*}*/
+
+/*.footer-section:first-of-type span {*/
+
+	/*justify-content: center;*/
+	/*text-align: center;*/
+	/*margin-top: 5px;*/
+	/*direction: ltr;*/
+
+/*}*/
+
+@media only screen and (max-width:768px) {
+
+	.navbar-header {
+
+		float: none;
+	}
+
+	button.navbar-toggle {
+
+		border : none;
+	}
+
+
+	button.navbar-toggle .icon-bar {
+
+		background-color: red;
+		font-size: 2em;
+	}
+
+	button.navbar-toggle .icon-bar:hover {
+
+		background-color: blue;
+	}
+
+	div.navbar-collapse {
+
+		background-color: white;
+        overflow-x: hidden;
+
+    }
+
+
+	.navbar-nav{
+
+		padding: 10px 0;
+
+    }
+
+    .navbar-nav li a {
+
+        color: blue;
+		width: 100%;
+
+    }
+
+	.navbar-nav li {
+
+		text-align: center;
+
+    }
+
+	.navbar-nav li a:hover {
+
+		background-color: blue !important;
+        color: white;
+
+	}
+	.dropdown-menu li  {
+
+		color: blue;
+	}
+
+	.dropdown-menu li a:hover{
+
+		color: white;
+		background-color: red;
+	}
+
+	/*.navbar-nav li:active {*/
+
+		/*background-color: blue;*/
+		/*color: white;*/
+	/*}*/
+
+
+
+	.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
+
+		 background-color: blue !important;
+		 color:white;
+
+	 }
+
+	.slider img{
+
+		width: 100%;
+		height: inherit;
+
+	}
+
+	.slider span {
+
+		display: none;
+	}
+
+	.subs-form {
+
+		flex-direction: column;
+
+	}
+
+	.subs-form span , input {
+
+		width: 100% !important;
+		margin: 5px;
+
+	}
+
+	.special-part {
+
+		flex-direction: column;
+		height: auto;
+	}
+
+	.special-section {
+
+		border-bottom: none;
+		width: 100%;
+		font-size: 2.5em;
+
+	}
+
+	.special-section:last-of-type {
+
+		margin-bottom: 20px;
+
+	}
+
+	.articles {
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+
+	}
+
+	.article {
+
+		width: 95%;
+		border: 1px solid #aaa;
+		margin-bottom: 40px;
+		padding: 5px;
+	}
+
+	/*.footer#footer-sections div {*/
+
+		/*border-left: none;*/
+	/*}*/
+
+	.footer {
+
+		flex-direction: column;
+		height: auto;
+		justify-content: space-between;
+
+	}
+	.about-us {
+
+		display: flex;
+		width: 90%;
+		flex-direction: column;
+		align-self: center;
+		padding: 30px;
+
+	}
+
+
+	.about-us h4 {
+
+		margin-bottom: 20px;
+	}
+
+	.about-us p {
+
+		text-align: justify;
+
+	}
+
+	.social-networks {
+
+		display: flex;
+		width: 90%;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	.social-networks div{
+		display: flex;
+		align-self: center;
+
+	}
+
+	.social-networks div img{
+		width: 48px;
+		height: 48px;
+		margin: 15px;
+	}
+
+	.telegram-icon img {
+
+		width: 48px;
+		height: 48px;
+	}
+
+
+	.footer-logo {
+
+
+		display: flex;
+		width: 90%;
+		justify-content: center;
+	}
+
+	/*end of mediaquery*/
+}
+
+
+
+@media only screen and (max-width:480px) {
+
+	.navbar-margin {
+
+		margin-top: 50px;
+	}
+
+
+}
+
+@media only screen and (min-width: 769px){
+
+	.navbar-header {
+
+		float: left;
+	}
+
+}
