@@ -28,10 +28,10 @@
     <meta charset="utf-8">
     <title>Translate</title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/bootstrap-rtl.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/fonts/IRANSansWeb.woff">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/fonts/ShadowsIntoLight.woff">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/fonts/ShadowsIntoLight.ttf">
 
     <?php wp_head(); ?>
 
@@ -48,7 +48,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/works/translate/" style="font-family:Shadows Into Light">Francais Fastoche</a>
+            <a class="navbar-brand" href="/works/translate/">Francais Fastoche</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
