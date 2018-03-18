@@ -55,7 +55,12 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 @font-face {
 
   font-family: IRANsans;
-  src: url('./assets/fonts/IRANSansWeb.woff');
+  src: url('assets/fonts/IRANSansWeb.woff');
+}
+@font-face {
+
+  font-family: Shadow;
+  src: url('assets/fonts/ShadowsIntoLight.woff');
 }
 
 html,
@@ -94,7 +99,9 @@ nav {
 
   font-size: 1.2em;
   display: block;
-  background-color: white;
+  background: -moz-linear-gradient(left, #0000ff 0%, #ffffff 10%, #ffffff 90%, #ff0000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #0000ff 0%,#ffffff 10%,#ffffff 90%,#ff0000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #0000ff 0%,#ffffff 10%,#ffffff 90%,#ff0000 100%);
 }
 
 a {
@@ -105,7 +112,7 @@ a {
 
     float: left;
 	clear:left;
-	background-color: white;
+/*	background-color: white;*/
 	text-shadow: 1px 1px  #ddd;
 }
 
@@ -130,6 +137,8 @@ a.navbar-brand {
 	letter-spacing: 2px;
 	font-size: 1.8em;
 	float: left;
+    font-family: Shadow;
+    
 
 }
 
@@ -146,6 +155,14 @@ a.navbar-brand {
 .navbar-nav li a {
 
 	color: red;
+}
+
+
+.top-menu  {
+    
+/*    height: 100%;*/
+    border: none;
+    
 }
 
 
@@ -243,6 +260,7 @@ a.navbar-brand {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 50px;
+    padding: 0 30px;
 
 }
 
@@ -256,6 +274,7 @@ a.navbar-brand {
 	outline: none;
 	width: 30%;
 	border-radius: 5px;
+    margin-bottom: 10px;
 
 }
 
@@ -269,6 +288,7 @@ a.navbar-brand {
 	border: 1px solid #f3f3f3;
 	width: 27%;
 	border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 
@@ -280,9 +300,18 @@ a.navbar-brand {
 	background-color: #eee;
 }
 
-.des {
+.main-des {
 
-	padding:20px 40px;
+/*    width: 100%;*/
+	display: flex;
+/*    flex-direction: row;*/
+}
+
+.des {
+    
+    width: 90%;
+	padding:20px 10px;
+
 }
 
 .des span {
@@ -416,11 +445,13 @@ a.navbar-brand {
 	margin: 15px;
 }
 
+/*
 .telegram-icon img {
 
 	width: 48px;
 	height: 48px;
 }
+*/
 
 
 .footer-logo {
@@ -509,7 +540,7 @@ a.navbar-brand {
 
 /*}*/
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:767px) {
 
 	.navbar-header {
 
@@ -560,22 +591,26 @@ a.navbar-brand {
 
     }
 
+/*
 	.navbar-nav li a:hover {
 
 		background-color: blue !important;
         color: white;
 
 	}
+*/
 	.dropdown-menu li  {
 
 		color: blue;
 	}
 
+/*
 	.dropdown-menu li a:hover{
 
 		color: white;
 		background-color: red;
 	}
+*/
 
 	/*.navbar-nav li:active {*/
 
@@ -585,12 +620,14 @@ a.navbar-brand {
 
 
 
+/*
 	.nav .open > a, .nav .open > a:focus, .nav .open > a:hover{
 
 		 background-color: blue !important;
 		 color:white;
 
 	 }
+*/
 
 	.slider img{
 
@@ -609,6 +646,14 @@ a.navbar-brand {
 		flex-direction: column;
 
 	}
+    
+    .subs-form input[type="text"] {
+
+	
+    margin-bottom: 10px;
+
+}
+    
 
 	.subs-form span , input {
 
@@ -738,11 +783,25 @@ a.navbar-brand {
 
 }
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 768px){
 
 	.navbar-header {
 
 		float: left;
 	}
 
+}
+
+@media only screen and (max-width:900px) {
+    
+    .main-des {
+        
+        flex-direction: column;
+    }
+    
+    .social-networks div img{
+	width: 36px;
+	height: 36px;
+	margin: 10px;
+}
 }
